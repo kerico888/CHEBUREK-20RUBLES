@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЧЕБУРЕЧНАЯ №1 | Официальный сайт</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">ЧЕБУРЕЧНАЯ №1</div>
+            <button class="cart-btn" id="open-cart">
+                Корзина (<span id="cart-count">0</span>)
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>ТРАДИЦИОННЫЕ ЧЕБУРЕКИ</h1>
+            <p class="subtitle">Фиксированная цена — 50 ₽ / шт.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Все (12)</button>
+            <button class="filter-btn" data-filter="mild">Не острые (5)</button>
+            <button class="filter-btn" data-filter="spicy">Острые (7)</button>
+        </div>
+
+        <div class="product-grid" id="product-grid">
+            <!-- Карточки генерируются через JS -->
+        </div>
+    </main>
+
+    <!-- Модальное окно корзины -->
+    <div class="modal" id="cart-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Ваш заказ</h2>
+                <span class="close-btn" id="close-cart">&times;</span>
+            </div>
+            <div class="modal-body" id="cart-items">
+                <!-- Товары в корзине -->
+            </div>
+            <div class="modal-footer">
+                <div class="cart-total">Итого: <span id="cart-total-price">0</span> ₽</div>
+                <button class="checkout-btn" onclick="alert('Заказ принят в обработку!')">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 ЧЕБУРЕЧНАЯ №1. Все права защищены.</p>
+            <p>Стандарты качества ГОСТ. Ежедневная выпечка.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
